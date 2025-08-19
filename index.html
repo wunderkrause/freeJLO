@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#FreeJLO - Unleash the Lotus!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Oswald', sans-serif;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: #fff;
+            margin: 0;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        h1,
+        h2,
+        h3 {
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 4em;
+            color: #ffde59;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            font-weight: 400;
+            margin-top: 0.5rem;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .card-image-container {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .card-image {
+            max-width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px 5px rgba(255, 222, 89, 0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .card-image:hover {
+            transform: scale(1.05);
+        }
+
+        .generator-section {
+            text-align: center;
+        }
+
+        .protest-button {
+            background: #ffde59;
+            color: #333;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            text-transform: uppercase;
+        }
+
+        .protest-button:hover {
+            background-color: #fff;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .protest-button:active {
+            transform: translateY(1px);
+        }
+
+        #protestBlurb {
+            background: rgba(0, 0, 0, 0.5);
+            border-left: 5px solid #ffde59;
+            padding: 1rem 1.5rem;
+            margin-top: 2rem;
+            font-style: italic;
+            text-align: left;
+            border-radius: 0 10px 10px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1em;
+            color: #eee;
+        }
+
+        .audio-controls {
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .audio-button {
+            background: none;
+            border: none;
+            color: #ffde59;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .audio-button:hover {
+            transform: scale(1.1);
+        }
+
+        .audio-icon {
+            display: inline-block;
+            transition: opacity 0.3s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="card">
+            <h1>#FreeJLO</h1>
+            <h2>A Call to Unleash the Lotus!</h2>
+            <div class="audio-controls">
+                <audio id="bgMusic" loop>
+                    <source src="assets/background-music.mp3" type="audio/mpeg">
+                </audio>
+                <button id="muteButton" class="audio-button">
+                    <span class="audio-icon">🔊</span>
+                </button>
+            </div>
+            <p>On September 23, 2024, the Commander Rules Committee banned Jeweled Lotus, a card celebrated for its
+                ability to accelerate commanders and enable diverse strategies. This decision, aimed at curbing overly
+                explosive starts, has inadvertently stifled creativity and punished players who enjoy casting high-cost
+                commanders. The #FreeJLO campaign is a movement for players who believe in freedom of play and the
+                excitement that powerful cards bring to the Commander format. We advocate for the unbanning of Jeweled
+                Lotus, championing a format where players can explore the full spectrum of strategic possibilities.</p>
+        </header>
+
+        <div class="card-image-container">
+            <img src="https://cards.scryfall.io/large/front/3/c/3c7de64b-3dc8-47dd-8999-4353b5a3a06f.jpg?1608911508"
+                alt="Jeweled Lotus Card" class="card-image">
+        </div>
+
+        <section class="card generator-section">
+            <h3>Generate Your Protest Blurb</h3>
+            <p>Click the button below to generate a message to share on social media and show your support for the
+                #FreeJLO movement!</p>
+            <button class="protest-button" onclick="generateBlurb()">Generate Blurb</button>
+            <blockquote id="protestBlurb">
+                <p>The ban on Jeweled Lotus hurts more than just high-power decks; it limits the viability of countless
+                    fun and creative commanders. Let's not punish innovation. The Commander format should be about
+                    expression, not restriction. #FreeJLO</p>
+            </blockquote>
+        </section>
+
+        <section class="card">
+            <h3>Why the Uproar? A Divided Community</h3>
+            <p>The ban on Jeweled Lotus has sparked a significant debate within the Magic: The Gathering community.
+                Proponents of the ban argue that the card led to unbalanced games, giving an unfair advantage to players
+                who could afford its hefty price tag and enabling commanders to enter the battlefield far too early.
+                They contend that this created a less enjoyable experience for those with more modest decks.</p>
+            <p>Conversely, opponents of the ban, the driving force behind the #FreeJLO movement, argue that Jeweled
+                Lotus was a great equalizer for commanders with higher mana costs, making a wider range of legendary
+                creatures viable and promoting diversity in the format. Many players feel that the ban
+                disproportionately affects casual players who enjoyed the explosive plays the card could generate and
+                cEDH (Competitive Elder Dragon Highlander) players who relied on it for certain strategies. The
+                financial impact on players who invested in the card is also a significant point of contention, with
+                many feeling their investment was unfairly nullified. The community remains divided, with passionate
+                arguments on both sides of the issue.</p>
+        </section>
+
+        <footer>
+            <p>Let your voice be heard. Join the movement. #FreeJLO</p>
+        </footer>
+    </div>
+
+    <script>
+        const blurbs = [
+            "Every game without her feels incomplete. #freeJLO",
+            "The dance floor is empty—let her back in. #freeJLO",
+            "Legends never stay banned forever. #freeJLO",
+            "She’s not overpowered, she’s just iconic. #freeJLO",
+            "Why cage brilliance? #freeJLO",
+            "No glitz, no glory. #freeJLO",
+            "The meta is bland without her flair. #freeJLO",
+            "They banned fashion itself. #freeJLO",
+            "Decks are crying out for rhythm. #freeJLO",
+            "Magic should sparkle again. #freeJLO",
+            "Bring the drama back to the battlefield. #freeJLO",
+            "This format needs a diva. #freeJLO",
+            "She was never broken—just bold. #freeJLO",
+            "Stop gatekeeping glamour. #freeJLO",
+            "No card slays like she slays. #freeJLO",
+            "Why ban perfection? #freeJLO",
+            "Magic without her is like karaoke without a mic. #freeJLO",
+            "The party starts when she shows up. #freeJLO",
+            "Game nights have been too quiet. #freeJLO",
+            "Let her hit the stage again. #freeJLO",
+            "You banned fun. Bring it back. #freeJLO",
+            "This meta needs more sass. #freeJLO",
+            "Stop hating—start unbanning. #freeJLO",
+            "I checked the math. She’s fine. #freeJLO",
+            "Ban bad vibes, not icons. #freeJLO",
+            "She’s guilty only of being fabulous. #freeJLO",
+            "If flavor text is legal, so should she be. #freeJLO",
+            "Every topdeck feels emptier without her. #freeJLO",
+            "Justice for the queen. #freeJLO",
+            "Your ban list needs a makeover. #freeJLO",
+            "At least let us sideboard her. #freeJLO",
+            "Imagine banning sparkle… cringe. #freeJLO",
+            "Her only crime: being iconic. #freeJLO",
+            "The battlefield looks too basic without her. #freeJLO",
+            "Mana floods are worse than she ever was. #freeJLO",
+            "Step aside, power creep—she deserves a comeback. #freeJLO",
+            "Every banlist update is pain until she’s free. #freeJLO",
+            "Who’s really afraid of her? Cowards. #freeJLO",
+            "Unban now, thank us later. #freeJLO",
+            "Breaking news: she’s not the problem. #freeJLO",
+            "Other cards are stronger and still legal. #freeJLO",
+            "The format has moved on—let her return. #freeJLO",
+            "Fair decks need fair tools. #freeJLO",
+            "The ban was overkill. #freeJLO",
+            "Metagames evolve—so should the list. #freeJLO",
+            "She’s not warping anymore. #freeJLO",
+            "Bring back balance—unban her. #freeJLO",
+            "She kept toxic strategies in check. #freeJLO",
+            "A healthy format includes her. #freeJLO",
+            "Competitive balance no longer justifies the ban. #freeJLO",
+            "Reevaluate the data—it’s time. #freeJLO",
+            "Fair play, fair chance, fair unban. #freeJLO",
+            "The format adapted—so can she. #freeJLO",
+            "She’s no longer the threat you think she is. #freeJLO",
+            "Let players choose again. #freeJLO",
+            "Diversity means unbanning. #freeJLO",
+            "Her absence makes the game worse, not better. #freeJLO",
+            "Deckbuilding creativity deserves her. #freeJLO",
+            "If you can’t handle her, maybe that’s a you problem. #freeJLO",
+            "This ban is outdated. #freeJLO",
+            "The people demand her return! #freeJLO",
+            "Raise your voice—bring her back. #freeJLO",
+            "This is our hill to die on. #freeJLO",
+            "Join the movement. #freeJLO",
+            "Make your decks whole again. #freeJLO",
+            "The revolution will be unbanned. #freeJLO",
+            "No more silence—time to shine. #freeJLO",
+            "It’s not just a card—it’s justice. #freeJLO",
+            "Together, we can free her. #freeJLO",
+            "The chant is simple: unban now. #freeJLO",
+            "Formats live, legends return. #freeJLO",
+            "Every voice counts—say it loud. #freeJLO",
+            "Don’t just shuffle, fight back. #freeJLO",
+            "Stand for fairness, stand for fun. #freeJLO",
+            "This community deserves better. #freeJLO",
+            "Unban updates should feel like Christmas—make it happen. #freeJLO",
+            "History remembers icons. Don’t forget her. #freeJLO",
+            "No excuses. Just unban her. #freeJLO",
+            "Players united—let’s go. #freeJLO",
+            "This is bigger than cardboard. #freeJLO",
+            "She was framed. #freeJLO",
+            "Legends don’t belong on lists. #freeJLO",
+            "The ban list isn’t a prison. #freeJLO",
+            "A queen belongs on her throne. #freeJLO",
+            "Stop the madness. #freeJLO",
+            "She deserves redemption. #freeJLO",
+            "The ban was a mistake. #freeJLO",
+            "A true fan favorite deserves freedom. #freeJLO",
+            "The time is now. #freeJLO",
+            "Unban. Unlock. Unleash. #freeJLO",
+            "The stage is waiting. #freeJLO",
+            "Stop hiding behind excuses. #freeJLO",
+            "A world without her is dull. #freeJLO",
+            "Icons can’t be contained. #freeJLO",
+            "You can’t ban destiny. #freeJLO",
+            "Cards come and go, legends return. #freeJLO",
+            "The community knows the truth. #freeJLO",
+            "Meta ready, player ready—she’s ready. #freeJLO",
+            "Fun isn’t broken. #freeJLO",
+            "Bring back the magic. #freeJLO"
+        ];
+
+        function generateBlurb() {
+            const blurbElement = document.getElementById('protestBlurb').getElementsByTagName('p')[0];
+            let newBlurb = blurbs[Math.floor(Math.random() * blurbs.length)];
+
+            while (newBlurb === blurbElement.textContent) {
+                newBlurb = blurbs[Math.floor(Math.random() * blurbs.length)];
+            }
+
+            blurbElement.textContent = newBlurb;
+        }
+
+        // Audio control
+        const bgMusic = document.getElementById('bgMusic');
+        const muteButton = document.getElementById('muteButton');
+        const audioIcon = document.querySelector('.audio-icon');
+
+        muteButton.addEventListener('click', () => {
+            if (bgMusic.paused) {
+                bgMusic.play();
+                audioIcon.textContent = '🔊';
+            } else {
+                bgMusic.pause();
+                audioIcon.textContent = '🔇';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
